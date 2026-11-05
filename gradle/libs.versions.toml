@@ -1,0 +1,15 @@
+[versions]
+snakeyaml = "2.6"
+annotations = "26.1.0"
+junit = "6.0.3"
+paper = "1.21.11-R0.1-SNAPSHOT"
+mockbukkit = "4.116.3"
+
+[libraries]
+snakeyaml = { module = "org.yaml:snakeyaml", version.ref = "snakeyaml" }
+annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+mockbukkit = { module = "org.mockbukkit.mockbukkit:mockbukkit-v1.21", version.ref = "mockbukkit" }

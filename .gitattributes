@@ -1,0 +1,23 @@
+# Normalise everything to LF in the repository; check out with native endings
+# only where a tool demands it. Without this, core.autocrlf=true on Windows
+# commits gradlew with CRLF and it fails on Linux/macOS with "bad interpreter".
+* text=auto eol=lf
+
+# Windows-only scripts must keep CRLF
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+
+# Shell scripts must keep LF wherever they are checked out
+*.sh            text eol=lf
+gradlew         text eol=lf
+
+# Never touch binaries
+*.jar           binary
+*.class         binary
+*.png           binary
+*.ico           binary
+
+# Keep generated wrapper files out of diffs and language stats
+gradle/wrapper/gradle-wrapper.jar   binary linguist-vendored
+gradlew                             linguist-vendored
+gradlew.bat                         linguist-vendored
